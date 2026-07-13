@@ -272,7 +272,7 @@ export async function fetchInvoiceById(id: string) {
         id: invoice.customer_id,
         customer_id: invoice.customer_id,
         amount: invoice.amount / 100,
-        status: invoice.status,
+        status: invoice.status as 'pending' | 'paid',
       };
     }
 
@@ -301,7 +301,7 @@ export async function fetchInvoiceById(id: string) {
       id: invoice.customer_id,
       customer_id: invoice.customer_id,
       amount: invoice.amount / 100,
-      status: invoice.status,
+      status: invoice.status as 'pending' | 'paid',
     };
   }
 }
