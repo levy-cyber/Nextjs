@@ -118,6 +118,10 @@ export async function deleteInvoice(prevState: State, formData: FormData) {
   }
 }
 
+export async function deleteInvoiceAction(formData: FormData) {
+  return deleteInvoice(undefined, formData);
+}
+
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
