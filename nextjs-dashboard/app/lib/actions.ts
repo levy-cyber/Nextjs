@@ -119,7 +119,15 @@ export async function deleteInvoice(prevState: State, formData: FormData) {
 }
 
 export async function deleteInvoiceAction(formData: FormData) {
-  return deleteInvoice(undefined, formData);
+  await deleteInvoice({ message: null }, formData);
+}
+
+export async function createInvoiceAction(formData: FormData) {
+  await createInvoice({ message: null }, formData);
+}
+
+export async function updateInvoiceAction(formData: FormData) {
+  await updateInvoice({ message: null }, formData);
 }
 
 export async function authenticate(
